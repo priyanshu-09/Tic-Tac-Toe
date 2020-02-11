@@ -42,8 +42,9 @@
     .heading{
         margin-top: 4vh;
         font-size: 3em;
-        width: 68vw;
+        width: 100vw;
         margin-bottom: 10vh;
+        word-wrap: none;
     }
     .other-elem{
         min-width: 10vw;
