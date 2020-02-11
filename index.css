@@ -60,11 +60,11 @@
         left: 35vw;
     }
     .player-img{
-        height: 6vh;
-        width: 6vh;
+        height: 4vh;
+        width: 4vh;
         margin: 3vh;
         position: fixed;
-        top: 13vh;
+        top: 14vh;
         right: 23vw;
     }
     .box{
