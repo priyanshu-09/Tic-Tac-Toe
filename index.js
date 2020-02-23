@@ -224,8 +224,8 @@ function box_color(){
         for(var i=0;i<3;i++){
             for(var j=0;j<3;j++){
                     var box=(i*3)+j
-                    
-                    if(box!=new_box&&box!=old_box){
+                    var border_c=document.getElementsByClassName('small-box')[box].style.borderColor
+                    if(box!=new_box&&box!=old_box&&border_c!='rgb(102, 252, 241)'&&border_c!='rgb(255, 255, 255)'){
                         colored_boxes.push(j)
                         coloured_bigRows.push(i)
                         document.getElementsByClassName('small-box')[box].style.backgroundColor=light_blue
