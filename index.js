@@ -1,4 +1,5 @@
-let bigRow,smallBox,smallRow,spaces
+let bigRow,smallBox,smallRow,spaces;
+let id_no;
 let Arr_box=[
     [
         [
@@ -104,6 +105,8 @@ function space(input){
     var val=Arr_box[bigRow][smallBox][smallRow][spaces]
     if(val==''&&Arr_box[bigRow][smallBox]!=1&&Arr_box[bigRow][smallBox]!=2&&color=='rgb(44, 64, 71)'){
         let coord=space_calc(input)
+        id_no=`${bigRow}${smallBox}${smallRow}${input}`
+        
         //console.log(coord)
         moved=false
         let player=parseInt(document.getElementById('pl-no').innerHTML)-1
@@ -120,9 +123,11 @@ function space(input){
         box_color()
         timer()
         player_change()
+        
     }
     else if(color!='rgb(44, 64, 71)'){
         alert('You need to choose a box that is highlighted')
+        console.log(id_no)
     }
     else{
         alert('Choose another space')
@@ -178,7 +183,7 @@ function decolorize(){
         for(var j=0;j<3;j++){
             var box_no=(i*3)+j
             var border_c=document.getElementsByClassName('small-box')[box_no].style.borderColor
-            console.log(border_c)
+            // console.log(border_c)
             if(border_c=='rgb(44, 64, 71)'||border_c=='rgb(23, 37, 42)'){
                 document.getElementsByClassName('small-box')[box_no].style.backgroundColor=dark_blue
                 document.getElementsByClassName('small-box')[box_no].style.borderColor='transparent'
